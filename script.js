@@ -1,42 +1,32 @@
-// $(document).ready(function() {
-//   $('#input').change(function() {
-//     var userInput = $("#input").val();
-//     console.log(userInput);
-//     var toDoItem = $("div").append("<p></p>");
-//     $("p:last-child").append(userInput);
-//     $("#input").val("");
-//   });
-// });
-
-
-// $(document).ready(function() {
-//   var li = document.createElement("li");
-//   var inputValue = document.getElementById("input").value;
-//   var t = document.createTextNode(inputValue);
-//   li.appendChild(t);
-//   var ul = document.getElementsByClassName("ul");
-//   ul.appendChild(li);
-// });
-
-
 $(document).ready(function() {
   //create x for each list
   var list = document.getElementsByTagName("li");
   for (var i=0; i<list.length; i++) {
     var span = document.createElement("span");
-    span.setAttribute("class", "close");
+    span.setAttribute("class", "hide");
     var x = document.createTextNode("\u00D7");
     span.append(x);
     list[i].append(span);
   }
 
-  // add check when clicked on
-  var list = document.querySelector('ul');
-  list.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-      ev.target.classList.toggle('checked');
+  // click on the close to hide
+  var close = document.getElementsByClassName("hide");
+  for (var i = 0; i < close.length; i++) {
+    // when clicked on
+    close[i].onclick = function() {
+      this.parentElement.style.display = "none"; // does not display the list
+    }
+  }
+
+  // create a check mark when clicked on
+  var uList = document.querySelector('ul');
+  uList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'li') {
+      e.target.classList.toggle('check');
     }
   }, false);
+
+  var check = document.createTextNode("\u2713\t");
 
   $(document).keypress(function(e) {
     var text = document.getElementById("input").value; // gets the value of the input
@@ -45,31 +35,23 @@ $(document).ready(function() {
       var toDoItem = document.createElement("li"); // creates <li></li>
       toDoItem.append(text);                      // <li>text</li>
       // toDoItem.setAttribute("onclick", "Removeli()");
-      toDoItem.setAttribute("class", "remove");
       $("#myUl").append(toDoItem);                // adds to the end of the list
       document.getElementById("input").value = ''; // resets user input
 
       // create x when enter is pressed
       var span = document.createElement("span");
       var x = document.createTextNode("\u00D7");
-      span.setAttribute("class", "close");
+      span.setAttribute("class", "hide");
       span.append(x);
       toDoItem.append(span);
-    }
 
-
-
-
-    // delete items when clicked on
-    for (var i = 0; i < close.length; i++) {
-      // when clicked
-      close[i].onclick = function() {
-        var span = document.createElement("span");
-        span.setAttribute("class", "check");
-        span.append(check);
-        this.prepend(span);
+      for (var i = 0; i < close.length; i++) {
+        // when clicked on
+        close[i].onclick = function() {
+          this.parentElement.style.display = "none"; // does not display the list
+        }
       }
     }
-  });
-  console.log(close + ": 1");
+
+});
 });

@@ -1,17 +1,24 @@
+body {
+  background-color: rgb(31, 31, 31);
+}
+
 div {
-  background-color: rgb(91, 33, 33);
+  background-color: rgb(22, 22, 22);
   width: 500px;
   height: 100%;
   margin: 0 auto;
   text-align: center;
   padding: 5px;
-  border: 3px black solid;
+  border: 2px rgb(2, 163, 191) solid;
   border-radius: 5px;
+  font-family: "courier";
 }
 
 h1 {
-  font-family: "arial";
-  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+  color: rgb(2, 163, 191);
 }
 
 input {
@@ -19,17 +26,26 @@ input {
   height: 20px;
   border-radius: 3px;
   margin-bottom: 10px;
+  background-color: rgb(31, 31, 31);
+  color: rgb(2, 163, 191);
+  border-color: rgb(2, 163, 191);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
-  background-color: rgb(255, 244, 207);
+  background-color: rgb(31, 31, 31);
   margin: 0 auto;
   text-align: left;
   height: 30px;
   width: calc(100% - 24px);
   line-height: 30px;
-  border: 1px solid rgb(91, 33, 33);
+  border: 1px solid rgb(2, 163, 191);
   padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
+  color: rgb(2, 163, 191);
 }
