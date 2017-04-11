@@ -1,18 +1,24 @@
+@font-face {
+  font-family:"NasalizationRg-Regular";
+  src: url("NASAfont/nasalization-rg.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(38, 38, 38);
-  font-family: 'Jura', sans-serif;
+  font-family:"NasalizationRg-Regular";
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("http://static.tumblr.com/f1ca41726bf8b0852c55cde522bd9eab/tho9kcx/03mmi0q0s/tumblr_static_original__1_.jpg");
 }
 
 #title {
   width: 100%;
   text-align: center;
   margin: 50px;
-  font-family: 'Exo 2', sans-serif;
-
+  font-size: 55px;
 }
 
 .toDoDays {
@@ -21,7 +27,7 @@ body {
 }
 
 .day {
-  background-color: rgb(27, 27, 27);
+  background-color: rgba(27, 27, 27, .6);
   width: 500px;
   height: 100%;
   margin: 0 5px;
@@ -30,22 +36,31 @@ body {
   border: 1px rgb(153, 241, 255) solid;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgb(111, 235, 255);
+
 }
+
+#tues, #thu {
+  margin-top: 60px;
+}
+
 
 h1 {
   text-transform: uppercase;
   font-weight: normal;
   text-decoration: none;
-  color: rgb(152, 239, 254);
-  text-shadow: 0 0 8px rgb(65, 193, 215);
+  color: rgb(228, 248, 255);
+  text-shadow: 0 0 11px rgb(160, 236, 249);
 }
 
 input {
-  width: calc(100% - 20px);
-  height: 20px;
+  font-family:"NasalizationRg-Regular";
+  width: calc(100% - 4px);
+  height: 30px;
+  padding-left: 10px;
+  font-size: 11px;
   border-radius: 3px;
-  margin-bottom: 10px;
-  background-color: rgb(38, 38, 38);
+  margin-bottom: 5px;
+  background-color: rgba(38, 38, 38, .5);
   color: rgb(65, 193, 215);
   border-color: rgb(65, 193, 215);
 }
@@ -56,7 +71,7 @@ ul {
 }
 
 li {
-  background-color: rgb(38, 38, 38);
+  background-color: rgba(38, 38, 38, .5);
   margin: 5px auto;
   text-align: left;
   height: 30px;
@@ -77,6 +92,7 @@ li {
 .hide {
   float: right;
   margin-right: 10px;
-  font-size: 20px;
+  margin-top: 2px;
+  font-size: 15px;
   color: rgb(182, 0, 0);
 }

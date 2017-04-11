@@ -4,7 +4,7 @@ $(document).ready(function() {
   for (var i=0; i<list.length; i++) {
     var span = document.createElement("span");
     span.setAttribute("class", "hide");
-    var x = document.createTextNode("\u00D7");
+    var x = document.createTextNode("\u25bd");
     span.append(x);
     list[i].append(span);
   }
