@@ -11,7 +11,8 @@
 
 body {
   font-family:"NasalizationRg-Regular";
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("http://static.tumblr.com/f1ca41726bf8b0852c55cde522bd9eab/tho9kcx/03mmi0q0s/tumblr_static_original__1_.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://3.bp.blogspot.com/-g1OowIgNw3Y/V74IUqMv4tI/AAAAAAAAgfI/yKlzUWOyE_s7UitBYP-7ZmlLAATz2T38QCHM/s1600/starlit-night-1440x900-pixels-wallpapers-tagged-black-earth.jpg");
+  background-size: 100%;
 }
 
 #title {
@@ -27,16 +28,15 @@ body {
 }
 
 .day {
-  background-color: rgba(27, 27, 27, .6);
   width: 500px;
   height: 100%;
   margin: 0 5px;
-  text-align: center;
   padding: 5px;
+  text-align: center;
   border: 1px rgb(153, 241, 255) solid;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgb(111, 235, 255);
-
+  background-color: rgba(27, 27, 27, .6);
 }
 
 #tues, #thu {
@@ -53,15 +53,15 @@ h1 {
 }
 
 input {
-  font-family:"NasalizationRg-Regular";
   width: calc(100% - 4px);
   height: 30px;
+  font-family:"NasalizationRg-Regular";
   padding-left: 10px;
   font-size: 11px;
   border-radius: 3px;
   margin-bottom: 5px;
   background-color: rgba(38, 38, 38, .5);
-  color: rgb(65, 193, 215);
+  color: rgb(228, 248, 255);
   border-color: rgb(65, 193, 215);
 }
 
@@ -87,6 +87,7 @@ li {
 
 .check {
   text-decoration: line-through;
+  opacity: .3;
 }
 
 .hide {
