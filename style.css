@@ -1,17 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(31, 31, 31);
+  display: flex;
 }
 
 div {
   background-color: rgb(22, 22, 22);
   width: 500px;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 5px;
   text-align: center;
   padding: 5px;
-  border: 2px rgb(2, 163, 191) solid;
+  /*border: 1px rgb(2, 163, 191) solid;*/
   border-radius: 5px;
-  font-family: "courier";
+  font-family: 'Jura', sans-serif;
+  /*box-shadow: 0px 3px 37px -15px rgba(219, 255, 252, 1);*/
+  box-shadow: 0 0 4px 2px rgb(91, 216, 237);
 }
 
 h1 {
@@ -38,14 +45,25 @@ ul {
 
 li {
   background-color: rgb(31, 31, 31);
-  margin: 0 auto;
+  margin: 5px auto;
   text-align: left;
   height: 30px;
-  width: calc(100% - 24px);
+  width: calc(100% - 4px);
   line-height: 30px;
   border: 1px solid rgb(2, 163, 191);
   padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
   color: rgb(2, 163, 191);
+}
+
+.check {
+  text-decoration: line-through;
+}
+
+.hide {
+  float: right;
+  margin-right: 10px;
+  font-size: 20px;
+  color: rgb(143, 23, 23);
 }
