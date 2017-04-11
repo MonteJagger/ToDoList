@@ -3,29 +3,41 @@
 }
 
 body {
-  background-color: rgb(31, 31, 31);
-  display: flex;
+  background-color: rgb(38, 38, 38);
+  font-family: 'Jura', sans-serif;
 }
 
-div {
-  background-color: rgb(22, 22, 22);
+#title {
+  width: 100%;
+  text-align: center;
+  margin: 50px;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+.toDoDays {
+  display: flex;
+  flex: wrap;
+}
+
+.day {
+  background-color: rgb(27, 27, 27);
   width: 500px;
   height: 100%;
   margin: 0 5px;
   text-align: center;
   padding: 5px;
-  /*border: 1px rgb(2, 163, 191) solid;*/
+  border: 1px rgb(153, 241, 255) solid;
   border-radius: 5px;
-  font-family: 'Jura', sans-serif;
-  /*box-shadow: 0px 3px 37px -15px rgba(219, 255, 252, 1);*/
-  box-shadow: 0 0 4px 2px rgb(91, 216, 237);
+  box-shadow: 0 0 2px 1px rgb(111, 235, 255);
 }
 
 h1 {
   text-transform: uppercase;
   font-weight: normal;
   text-decoration: none;
-  color: rgb(2, 163, 191);
+  color: rgb(152, 239, 254);
+  text-shadow: 0 0 8px rgb(65, 193, 215);
 }
 
 input {
@@ -33,9 +45,9 @@ input {
   height: 20px;
   border-radius: 3px;
   margin-bottom: 10px;
-  background-color: rgb(31, 31, 31);
-  color: rgb(2, 163, 191);
-  border-color: rgb(2, 163, 191);
+  background-color: rgb(38, 38, 38);
+  color: rgb(65, 193, 215);
+  border-color: rgb(65, 193, 215);
 }
 
 ul {
@@ -44,17 +56,18 @@ ul {
 }
 
 li {
-  background-color: rgb(31, 31, 31);
+  background-color: rgb(38, 38, 38);
   margin: 5px auto;
   text-align: left;
   height: 30px;
   width: calc(100% - 4px);
   line-height: 30px;
-  border: 1px solid rgb(2, 163, 191);
+  border: 1px solid rgb(65, 193, 215);
   padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
-  color: rgb(2, 163, 191);
+  color: rgb(236, 252, 255);
+  font-size: 13px;
 }
 
 .check {
@@ -65,5 +78,5 @@ li {
   float: right;
   margin-right: 10px;
   font-size: 20px;
-  color: rgb(143, 23, 23);
+  color: rgb(182, 0, 0);
 }
