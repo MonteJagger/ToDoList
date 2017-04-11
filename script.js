@@ -44,71 +44,67 @@ $(document).ready(function() {
   var check = document.createTextNode("\u2713\t");
 
 
-  $(".input").click(function() {
-    $(this).keypress(function(e) { //<input></input>
-      var text = this.value; // gets the value of the input
 
-      if (e.which == 13) { // when enter is pressed
-        var toDoItem = document.createElement("li"); // creates <li></li>
-        toDoItem.append(text);                      // <li>text</li>
+  $(".input").keypress(function(e) { //<input></input>
+    var text = this.value; // gets the value of the input
 
-        var ul = $(this).next(); // <ul></ul>
+    if (e.which == 13) { // when enter is pressed
+      var toDoItem = document.createElement("li"); // creates <li></li>
+      toDoItem.append(text);                      // <li>text</li>
 
-        var children = ul.children(); // get the whole list
-        var count = 0;
-        for (var i=0; i<children.length; i++) {
-          if ($(children[i]).hasClass("check")) { // if the element has class check
-            $(toDoItem).insertBefore(children[i]); // insert the element with the class before the first element the class check
-            count++;
-            break;
-          }
+      var ul = $(this).next(); // <ul></ul>
+
+      var children = ul.children(); // get the whole list
+      var count = 0;
+      for (var i=0; i<children.length; i++) {
+        if ($(children[i]).hasClass("check")) { // if the element has class check
+          $(toDoItem).insertBefore(children[i]); // insert the element with the class before the first element the class check
+          count++;
+          break;
         }
+      }
 
-        if (count == 0)
-          ul.append(toDoItem);
+      if (count == 0)
+      ul.append(toDoItem);
 
-        this.value = ''; // resets input value
+      this.value = ''; // resets input value
 
-        
-        // create x when enter is pressed
-        var span = document.createElement("span");
-        var x = document.createTextNode("\u25bd");
-        span.setAttribute("class", "hide");
-        span.append(x);
-        toDoItem.append(span);
 
-        // when x is clicked on
-        for (var i = 0; i < close.length; i++) {
-          // when clicked on
-          close[i].onclick = function() {
-            this.parentElement.style.display = "none"; // does not display the list
-          }
+      // create x when enter is pressed
+      var span = document.createElement("span");
+      var x = document.createTextNode("\u25bd");
+      span.setAttribute("class", "hide");
+      span.append(x);
+      toDoItem.append(span);
+
+      // when x is clicked on
+      for (var i = 0; i < close.length; i++) {
+        // when clicked on
+        close[i].onclick = function() {
+          this.parentElement.style.display = "none"; // does not display the list
         }
+      }
 
-        // crosses out to do item when clicked
-        for (var i=0; i<checks.length; i++){
-          checks[i].onclick = function() {
-            var parent = $(this).parent(); // gets the parent element
+      // crosses out to do item when clicked
+      for (var i=0; i<checks.length; i++){
+        checks[i].onclick = function() {
+          var parent = $(this).parent(); // gets the parent element
 
-            if ($(this).hasClass("check")){
-              var children = parent.children(); // get the whole list
-              for (var i=0; i<children.length; i++) {
-                if ($(children[i]).hasClass("check")) { // if the element has class check
-                  $(this).insertBefore(children[i]); // insert the element with the class before the first element the class check
-                  break;
-                }
+          if ($(this).hasClass("check")){
+            var children = parent.children(); // get the whole list
+            for (var i=0; i<children.length; i++) {
+              if ($(children[i]).hasClass("check")) { // if the element has class check
+                $(this).insertBefore(children[i]); // insert the element with the class before the first element the class check
+                break;
               }
             }
-            else
-              parent.append(this);
-
-            $(this).toggleClass("check"); // add a check class
           }
+          else
+          parent.append(this);
+
+          $(this).toggleClass("check"); // add a check class
         }
-        console.log("1");
       }
-      console.log("2");
-    });
-    console.log("3");
+    }
   });
 });
