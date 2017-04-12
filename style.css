@@ -11,7 +11,7 @@
 
 body {
   font-family:"NasalizationRg-Regular";
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://3.bp.blogspot.com/-g1OowIgNw3Y/V74IUqMv4tI/AAAAAAAAgfI/yKlzUWOyE_s7UitBYP-7ZmlLAATz2T38QCHM/s1600/starlit-night-1440x900-pixels-wallpapers-tagged-black-earth.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://3.bp.blogspot.com/-g1OowIgNw3Y/V74IUqMv4tI/AAAAAAAAgfI/yKlzUWOyE_s7UitBYP-7ZmlLAATz2T38QCHM/s1600/starlit-night-1440x900-pixels-wallpapers-tagged-black-earth.jpg"); center no-repeat;
   background-size: 100%;
 }
 
@@ -35,8 +35,8 @@ body {
   text-align: center;
   border: 1px rgb(153, 241, 255) solid;
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgb(111, 235, 255);
-  background-color: rgba(27, 27, 27, .6);
+  box-shadow: 0 0 5px 1px rgba(94, 208, 228, .9);
+  background-color: rgba(124, 124, 124, 0.27);
 }
 
 #tues, #thu {
@@ -60,9 +60,9 @@ input {
   font-size: 11px;
   border-radius: 3px;
   margin-bottom: 5px;
-  background-color: rgba(38, 38, 38, .5);
+  background-color: rgba(26, 26, 26, 0.84);
   color: rgb(228, 248, 255);
-  border-color: rgb(65, 193, 215);
+  border-color: rgb(94, 208, 228);
 }
 
 ul {
@@ -71,13 +71,13 @@ ul {
 }
 
 li {
-  background-color: rgba(38, 38, 38, .5);
+  background-color: rgba(26, 26, 26, 0.84);
   margin: 5px auto;
   text-align: left;
   height: 30px;
   width: calc(100% - 4px);
   line-height: 30px;
-  border: 1px solid rgb(65, 193, 215);
+  border: 1px solid rgb(94, 208, 228);
   padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -96,5 +96,5 @@ li {
   margin-top: 2px;
   font-size: 15px;
   color: rgb(182, 0, 0);
-  text-shadow: 0 0 2px rgb(182, 0, 0);
+  text-shadow: 0 0 7px rgb(250, 0, 0);
 }
