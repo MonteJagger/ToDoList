@@ -96,4 +96,5 @@ li {
   margin-top: 2px;
   font-size: 15px;
   color: rgb(182, 0, 0);
+  text-shadow: 0 0 2px rgb(182, 0, 0);
 }

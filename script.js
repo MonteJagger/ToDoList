@@ -40,10 +40,7 @@ $(document).ready(function() {
     }
   }
 
-
   var check = document.createTextNode("\u2713\t");
-
-
 
   $(".input").keypress(function(e) { //<input></input>
     var text = this.value; // gets the value of the input
@@ -56,6 +53,7 @@ $(document).ready(function() {
 
       var children = ul.children(); // get the whole list
       var count = 0;
+      // adds the new item before the checked items
       for (var i=0; i<children.length; i++) {
         if ($(children[i]).hasClass("check")) { // if the element has class check
           $(toDoItem).insertBefore(children[i]); // insert the element with the class before the first element the class check
@@ -64,11 +62,11 @@ $(document).ready(function() {
         }
       }
 
+      // if there are no checked items
       if (count == 0)
-      ul.append(toDoItem);
+        ul.append(toDoItem);
 
       this.value = ''; // resets input value
-
 
       // create x when enter is pressed
       var span = document.createElement("span");
@@ -100,9 +98,9 @@ $(document).ready(function() {
             }
           }
           else
-          parent.append(this);
+            parent.append(this);
 
-          $(this).toggleClass("check"); // add a check class
+          $(this).toggleClass("check"); // add a check class to element
         }
       }
     }
