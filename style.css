@@ -11,15 +11,15 @@
 
 body {
   font-family:"NasalizationRg-Regular";
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://3.bp.blogspot.com/-g1OowIgNw3Y/V74IUqMv4tI/AAAAAAAAgfI/yKlzUWOyE_s7UitBYP-7ZmlLAATz2T38QCHM/s1600/starlit-night-1440x900-pixels-wallpapers-tagged-black-earth.jpg"); center no-repeat;
-  background-size: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://3.bp.blogspot.com/-g1OowIgNw3Y/V74IUqMv4tI/AAAAAAAAgfI/yKlzUWOyE_s7UitBYP-7ZmlLAATz2T38QCHM/s1600/starlit-night-1440x900-pixels-wallpapers-tagged-black-earth.jpg") fixed center no-repeat;
+  background-size: cover;
 }
 
 #title {
   width: 100%;
   text-align: center;
   margin: 50px auto;
-  font-size: 45px;
+  font-size: 55px;
 }
 
 .toDoDays {
