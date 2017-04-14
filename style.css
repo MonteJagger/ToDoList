@@ -19,7 +19,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 50px auto;
-  font-size: 55px;
+  font-size: 35px;
 }
 
 .toDoDays {
@@ -30,10 +30,10 @@ body {
 
 .day {
   min-width: 300px;
-  width: 400px;
+  width: 350px;
   height: 100%;
   margin: 10px auto;
-  padding: 5px;
+  padding: 7px;
   text-align: center;
   border: 1px rgb(153, 241, 255) solid;
   border-radius: 5px;
@@ -49,20 +49,18 @@ body {
 h1 {
   text-transform: uppercase;
   font-weight: normal;
-  text-decoration: none;
   color: rgb(228, 248, 255);
   text-shadow: 0 0 11px rgb(160, 236, 249);
 }
 
 input {
-  width: calc(100% - 4px);
-  height: 30px;
+  width: 100%;
+  height: 35px;
   font-family:"NasalizationRg-Regular";
-  padding-left: 10px;
+  padding: 0 10px;
   font-size: 11px;
   border: 1px solid rgb(94, 208, 228);
   border-radius: 3px;
-  margin-bottom: 5px;
   outline-color: rgb(115, 215, 233);
   background-color: rgba(26, 26, 26, 0.84);
   color: rgb(228, 248, 255);
@@ -72,6 +70,7 @@ input {
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 10px 0 5px 0;
 }
 
 li {
@@ -79,10 +78,9 @@ li {
   background-color: rgba(26, 26, 26, 0.84);
   margin: 5px auto;
   text-align: left;
-  height: auto;
-  width: calc(100% - 4px);
+  min-height: 35px;
+  width: 100%;
   border: 1px solid rgb(94, 208, 228);
-  padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
   color: rgb(228, 248, 255);
@@ -90,7 +88,8 @@ li {
 }
 
 p {
-  width: calc(100% - 30px);
+  width: calc(100% - 40px);
+  padding-left: 10px
 }
 
 .check {
@@ -99,7 +98,7 @@ p {
 }
 
 .hide {
-  margin: auto 20px;
+  margin: auto 15px;
   font-size: 15px;
   color: rgb(182, 0, 0);
   text-shadow: 0 0 7px rgb(250, 0, 0);
