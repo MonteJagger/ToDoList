@@ -24,13 +24,13 @@ body {
 
 .toDoDays {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 .day {
   width: 500px;
   height: 100%;
-  margin: 0 5px;
+  margin: 10px 5px;
   padding: 5px;
   text-align: center;
   border: 1px rgb(153, 241, 255) solid;
@@ -39,9 +39,9 @@ body {
   background-color: rgba(124, 124, 124, 0.27);
 }
 
-#tues, #thu {
+/*#tues, #thu {
   margin-top: 60px;
-}
+}*/
 
 
 h1 {
@@ -58,8 +58,10 @@ input {
   font-family:"NasalizationRg-Regular";
   padding-left: 10px;
   font-size: 11px;
+  border: 1px solid rgb(94, 208, 228);
   border-radius: 3px;
   margin-bottom: 5px;
+  outline-color: rgb(115, 215, 233);
   background-color: rgba(26, 26, 26, 0.84);
   color: rgb(228, 248, 255);
   border-color: rgb(94, 208, 228);
@@ -71,18 +73,23 @@ ul {
 }
 
 li {
+  display: flex;
   background-color: rgba(26, 26, 26, 0.84);
   margin: 5px auto;
   text-align: left;
-  height: 30px;
+  height: auto;
   width: calc(100% - 4px);
   line-height: 30px;
   border: 1px solid rgb(94, 208, 228);
   padding-left: 10px;
   border-radius: 3px;
   cursor: pointer;
-  color: rgb(236, 252, 255);
+  color: rgb(228, 248, 255);
   font-size: 13px;
+}
+
+p {
+  width: calc(100% - 30px);
 }
 
 .check {
@@ -91,10 +98,9 @@ li {
 }
 
 .hide {
-  float: right;
-  margin-right: 10px;
-  margin-top: 2px;
+  margin: auto 20px;
   font-size: 15px;
   color: rgb(182, 0, 0);
   text-shadow: 0 0 7px rgb(250, 0, 0);
+  text-decoration: none;
 }

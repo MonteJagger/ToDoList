@@ -23,11 +23,12 @@ $(document).ready(function() {
   for (var i=0; i<checks.length; i++){
     checks[i].onclick = function() {
       var parent = $(this).parent(); // gets the parent element
+      var firChild = $(this).children().first();
 
-      if ($(this).hasClass("check")){
+      if (firChild.hasClass("check")){
         var children = parent.children(); // get the whole list
         for (var j=0; j<children.length; j++) {
-          if ($(children[j]).hasClass("check")) { // if the element has class check
+          if ($(children[j]).children().first().hasClass("check")) { // if the element has class check
             $(this).insertBefore(children[j]); // insert the element with the class before the first element the class check
             break;
           }
@@ -36,7 +37,7 @@ $(document).ready(function() {
       else
       parent.append(this);
 
-      $(this).toggleClass("check"); // add a check class
+      firChild.toggleClass("check"); // add a check class
     }
   }
 
@@ -47,7 +48,11 @@ $(document).ready(function() {
 
     if (e.which == 13) { // when enter is pressed
       var toDoItem = document.createElement("li"); // creates <li></li>
-      toDoItem.append(text);                      // <li>text</li>
+      var p = document.createElement("p");        // <p></p>
+      p.append(text);                             // <p>text</p>
+      toDoItem.append(p);                      // <li><p></p></li>
+
+
 
       var ul = $(this).next(); // <ul></ul>
 
@@ -55,7 +60,7 @@ $(document).ready(function() {
       var count = 0;
       // adds the new item before the checked items
       for (var i=0; i<children.length; i++) {
-        if ($(children[i]).hasClass("check")) { // if the element has class check
+        if ($(children[i]).children().first().hasClass("check")) { // if the element has class check
           $(toDoItem).insertBefore(children[i]); // insert the element with the class before the first element the class check
           count++;
           break;
@@ -87,12 +92,13 @@ $(document).ready(function() {
       for (var i=0; i<checks.length; i++){
         checks[i].onclick = function() {
           var parent = $(this).parent(); // gets the parent element
+          var firChild = $(this).children().first(); // first child of clicked li
 
-          if ($(this).hasClass("check")){
+          if (firChild.hasClass("check")){
             var children = parent.children(); // get the whole list
-            for (var i=0; i<children.length; i++) {
-              if ($(children[i]).hasClass("check")) { // if the element has class check
-                $(this).insertBefore(children[i]); // insert the element with the class before the first element the class check
+            for (var j=0; j<children.length; j++) {
+              if ($(children[j]).children().first().hasClass("check")) { // if the element has class check
+                $(this).insertBefore(children[j]); // insert the element with the class before the first element the class check
                 break;
               }
             }
@@ -100,7 +106,7 @@ $(document).ready(function() {
           else
             parent.append(this);
 
-          $(this).toggleClass("check"); // add a check class to element
+          firChild.toggleClass("check"); // add a check class to element
         }
       }
     }
