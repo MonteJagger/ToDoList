@@ -32,7 +32,7 @@ body {
   min-width: 300px;
   width: 400px;
   height: 100%;
-  margin: 10px 5px;
+  margin: 10px auto;
   padding: 5px;
   text-align: center;
   border: 1px rgb(153, 241, 255) solid;
