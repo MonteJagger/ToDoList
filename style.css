@@ -18,17 +18,19 @@ body {
 #title {
   width: 100%;
   text-align: center;
-  margin: 50px;
-  font-size: 55px;
+  margin: 50px auto;
+  font-size: 45px;
 }
 
 .toDoDays {
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .day {
-  width: 500px;
+  min-width: 300px;
+  width: 400px;
   height: 100%;
   margin: 10px 5px;
   padding: 5px;
@@ -79,7 +81,6 @@ li {
   text-align: left;
   height: auto;
   width: calc(100% - 4px);
-  line-height: 30px;
   border: 1px solid rgb(94, 208, 228);
   padding-left: 10px;
   border-radius: 3px;
