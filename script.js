@@ -14,28 +14,6 @@ $(document).ready(function() {
     this.parentElement.style.display = "none";
   });
 
-  // toggle the check class to do item and add it to the bottom when clicked
-  // $(".listItem").click(function() {
-  //     var parent = $(this).parent();
-  //     var lists = $(parent).children();
-  //     var count = 0;
-  //     for (var i=0; i<lists.length; i++) {
-  //       if ($(lists[i]).hasClass("check")) {
-  //         $(this).insertBefore(lists[i]);
-  //         count++;
-  //         console.log("1. " + lists[i] + " " + count);
-  //         break;
-  //       }
-  //     }
-  //
-  //     if (count == 0)
-  //       parent.append(this);
-  //
-  //     $(this).toggleClass("check");
-  //
-  // });
-
-
 
   var list = document.getElementsByClassName("listItem");
   for (var i=0; i<list.length; i++){
@@ -108,7 +86,7 @@ $(document).ready(function() {
       //     console.log(list);
       // });
 
-      crosses out to do item when clicked
+      // crosses out to do item when clicked
       for (var i=0; i<list.length; i++){
 
         list[i].onclick = function() {
